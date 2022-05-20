@@ -32,3 +32,5 @@ function deleteKey(obj, key){
 
 addKey(obj, 'name');
 console.log(obj);
+
+Math.pow();
