@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- fetch: 브라우저 API for 비동기-->
+  <script>
+    //json(): body 안에 있는 json 문자열을 JS 에서 쓸 수 있도록 객체로 변환해줌 // 단, 호출 결과는 json 형식이 아닌, 프로미스를 리턴한다.(json 으로 변환하는데 시간이 꽤 걸린다. 그래서 체이닝을 이용해야겠구나~~)
+
+    fetch('https://www.7timer.info/bin/api.pl?lon=113.17&lat=23.09&product=astro&output=json')
+      .then(response => response.json())
+      .then(data => console.log(data.dataseries)
+      );
+  </script>
+</body>
+
+</html>
